@@ -13,4 +13,3 @@ public class ParkingConstants {
     // We will use this for your "Custom Pick" feature later
     public static final double CUSTOM_SIZE_RATE_MULTIPLIER = 10.0; 
 }
-}
