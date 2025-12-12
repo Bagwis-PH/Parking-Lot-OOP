@@ -1,3 +1,5 @@
+package Basics;
+
 public class ParkingConstants {
     // Basic Pricing
     public static final double BASE_RATE_PER_HOUR = 30.00;
