@@ -1,25 +1,36 @@
 package Logic;
 
-import java.time.LocalDateTime;
-import java.time.Duration;
-import java.time.format.DateTimeFormatter;
 import Vehicles.Vehicle;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class ParkingTicket {
-    private static int idCounter = 1000; 
-    private String ticketID;
-    private Vehicle vehicle;
+    private static int idCounter = 999; 
+
+    private final String ticketID;
+
+    private final Vehicle vehicle;
+
     private LocalDateTime entryTime;
+
     private LocalDateTime exitTime;
+
     private double totalFee;
+
     private boolean isPaid;
+
     private boolean isOvernight; 
 
     public ParkingTicket(Vehicle vehicle) {
         this.ticketID = "TKT-" + idCounter++;
+
         this.vehicle = vehicle;
+
         this.entryTime = LocalDateTime.now(); 
+
         this.isPaid = false;
+
         this.isOvernight = false;
     }
 
@@ -47,10 +58,17 @@ public class ParkingTicket {
                "-----------------------";
     }
 
-    // --- GETTERS AND SETTERS ---
-    public String getTicketID() { return ticketID; }
-    public double getTotalFee() { return totalFee; }
-    public void setOvernight(boolean overnight) { this.isOvernight = overnight; }
+    // Getters and setters
+    public String getTicketID() { 
+        return ticketID; 
+    }
+        
+    public double getTotalFee() { 
+        return totalFee;
+     }
+    public void setOvernight(boolean overnight) {
+         this.isOvernight = overnight;
+     }
 
 
     public Vehicle getVehicle() { 
@@ -58,9 +76,16 @@ public class ParkingTicket {
     }
     
     public void simulateDuration(double hoursToSimulate) {
-        // We assume "hoursToSimulate" is how long they stayed.
-        // So we set the Entry Time to (NOW minus HOURS).
+        // hoursToSimulate is how long they stayed. Set entry Time to now - hrs.
         long minutes = (long) (hoursToSimulate * 60);
         this.entryTime = LocalDateTime.now().minusMinutes(minutes);
     }
+        public boolean isPaid() {
+            return isPaid;
+}
+
+public void markAsPaid() {
+    this.isPaid = true;
+}
+
 }

@@ -6,13 +6,13 @@ public abstract class Vehicle {
     private String licensePlate;
     private VehicleType type;
     
-    // Constructor
+    // constructor
     public Vehicle(String licensePlate, VehicleType type) {
         this.licensePlate = licensePlate;
         this.type = type;
     }
 
-    // Getters and Setters
+    // getters and setters
     public String getLicensePlate() {
         return licensePlate;
     }
