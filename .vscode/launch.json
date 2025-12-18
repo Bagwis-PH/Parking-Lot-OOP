@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ParkingGUI_Interactive",
+      "request": "launch",
+      "mainClass": "ParkingGUI_Interactive",
+      "projectName": "Parking-Lot-OOP_3122160"
+    },
+    {
+      "type": "java",
       "name": "Run Main",
       "request": "launch",
       "mainClass": "Main",
